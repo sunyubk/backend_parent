@@ -24,8 +24,60 @@
 
 
     <dependencies>
+        <!-- MyBatis-plus引入配置 start-->
+        <!-- mybatis-plus依赖 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
 
+        <!-- Druid引入 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- 数据源驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- 代码生成器依赖 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ibeetl</groupId>
+            <artifactId>beetl</artifactId>
+        </dependency>
+
+        <!-- 日志框架依赖 -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+        <!-- MyBatis-plus引入配置 end-->
     </dependencies>
+
+    <build>
+        <!-- 资源引入 解决mapper.xml 不在resouces中，编译的时候扫描不到对应文件 -->
+        <!--<resources>
+            &lt;!&ndash;<resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>&ndash;&gt;
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>-->
+    </build>
 
 
 </project>
